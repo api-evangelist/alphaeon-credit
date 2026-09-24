@@ -1,23 +1,71 @@
 aid: alphaeon-credit
+
 name: Alphaeon Credit
-description: 'Alphaeon Credit is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: http://static1.squarespace.com/static/583ef043f5e2313f41d80cf0/t/662045a77eeddd5bef18e610/1713391015741/Alphaeon_Credit_logo_registered_RGB.png?format=1500w
+
+description: 'Alphaeon Credit provides a credit card that allows patients to finance medical procedures such as dental work, plastic surgery, ophthalmology and dermatology treatments. The card offers special financing options for purchases over $250 with credit lines up to $25,000 and uses a soft inquiry that does not affect credit scores. Credit plans require minimum payments and are issued by Comenity Capital Bank, with approval subject to credit review.'
+
 url: https://raw.githubusercontent.com/api-evangelist/alphaeon-credit/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- Credit Card
+- Medical Financing
+- Dental
+- Plastic Surgery
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/alphaeon-credit-clarity-security.txt
+- type: WellKnown
+  url: well-known/alphaeon-credit-well-known.yml
+- type: Security
+  url: https://clarity.com/vdp
+- type: Hosts
+  url: hosts/alphaeon-credit-hosts.yml
+- type: Vendors
+  url: vendors/alphaeon-credit-vendors.yml
+- type: Login
+  url: https://goalphaeon.com/login
+- type: VulnerabilityDisclosure
+  url: security/alphaeon-credit-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/alphaeon-credit-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/alphaeon-credit-stock
+  url: https://goalphaeon.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
